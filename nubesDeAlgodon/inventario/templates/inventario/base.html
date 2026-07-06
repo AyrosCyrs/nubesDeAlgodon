@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titulo %}Nubes de Algodón{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'inventario/style.css' %}">
+    <style>
+        :root { --forest-img: url("{% static 'inventario/forest.webp' %}"); }
+    </style>
+</head>
+<body>
+
+    {% block nav %}
+    <nav>
+        <span class="nav-logo">{{ site_name|default:"Nubes de Algodón" }}</span>
+        <div>
+            <a href="{% url 'inventario:inicio' %}">Inicio</a>
+            <a href="{% url 'inventario:productos' %}">Productos</a>
+            <a href="{% url 'inventario:acerca' %}">Acerca de</a>
+        </div>
+    </nav>
+    {% endblock nav %}
+
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+    <footer style="border-top: 1px solid var(--verde-medio); padding: 1.5rem 2.5rem; display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+        <span style="font-size:11px; color:var(--muted); letter-spacing:0.12em; text-transform:uppercase;">
+            {{ site_name|default:"Nubes de Algodón" }}
+        </span>
+        <span style="font-size:11px; color:var(--verde-borde); letter-spacing:0.06em;">
+            v{{ site_version|default:"1.0.3" }} &mdash; UNAM · Ingeniería de Software
+        </span>
+    </footer>
+    {% endblock footer %}
+
+    <script src="{% static 'inventario/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends "inventario/base.html" %}
+{% load static %}
+{% block titulo %}Productos — Nubes{% endblock %}
+{% block content %}
+
+<div class="content fade-in" style="padding-top: 8rem;">
+    <div class="card-num" style="margin-bottom: 2rem;">02 / Inventario</div>
+    <h1 style="font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:300; color:var(--crema-fuerte); margin-bottom: 2rem;">
+        Inventario dinámico.
+    </h1>
+    <div class="card" style="max-width:500px;">
+        <ul id="lista-productos">
+            <li onclick="vender(this)">Nube Vainilla — <span class="stock">10</span> en stock</li>
+            <li onclick="vender(this)">Nube Fresa — <span class="stock">5</span> en stock</li>
+            <li onclick="vender(this)">Nube Matcha — <span class="stock">8</span> en stock</li>
+        </ul>
+        <small style="font-size:11px; color:var(--muted); letter-spacing:0.06em;">
+            Haz clic en un producto para reducir el stock
+        </small>
+    </div>
+    <a href="{% url 'inventario:acerca' %}" class="btn">Acerca de nosotros →</a>
+</div>
+{% endblock %}

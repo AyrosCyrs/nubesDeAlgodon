@@ -1,0 +1,31 @@
+{% extends "inventario/base.html" %}
+{% load static %}
+{% block titulo %}Acerca de — Nubes{% endblock %}
+{% block content %}
+
+<div class="content fade-in" style="padding-top: 8rem;">
+    <div class="card-num" style="margin-bottom: 2rem;">03 / Proyecto</div>
+    <h1 style="font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:300; color:var(--crema-fuerte); margin-bottom: 2rem;">
+        Sobre nosotros.
+    </h1>
+    <div class="card" style="max-width:500px;">
+        <p style="font-size:14px; color:var(--muted); line-height:1.8; margin-bottom:1rem;">
+            Proyecto de Ingeniería de Software — Facultad de Ciencias, UNAM.
+        </p>
+        <div id="reloj"></div>
+        <small style="font-size:11px; color:var(--muted); letter-spacing:0.06em;">
+            Versión {{ site_version|default:"1.0.3" }}
+        </small>
+    </div>
+    <a href="{% url 'inventario:inicio' %}" class="btn">← Volver al inicio</a>
+</div>
+
+<script>
+function actualizarReloj() {
+    document.getElementById('reloj').innerText =
+        new Date().toLocaleTimeString('es-MX', {hour12: false});
+}
+setInterval(actualizarReloj, 1000);
+actualizarReloj();
+</script>
+{% endblock %}

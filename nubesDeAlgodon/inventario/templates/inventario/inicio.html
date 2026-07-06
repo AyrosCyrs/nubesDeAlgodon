@@ -1,0 +1,32 @@
+{% extends "inventario/base.html" %}
+{% load static %}
+{% block titulo %}Inicio — Nubes{% endblock %}
+{% block content %}
+
+<div class="hero fade-in">
+    <div class="hero-bg"></div>
+    <div style="position:relative; z-index:2;">
+        <span class="hero-tag">Sistema de gestión · 2026</span>
+        <h1 class="hero-title">Nubes de<br><em>Algodón.</em></h1>
+        <div class="hero-divider"></div>
+        <p class="hero-sub">Bienvenida a tu sistema modular</p>
+        <a href="{% url 'inventario:productos' %}" class="btn">Ver inventario →</a>
+    </div>
+</div>
+
+<div class="content fade-in">
+    <div class="card-grid">
+        <div class="card">
+            <div class="card-num">01 / Sistema</div>
+            <h2>Gestión en tiempo real</h2>
+            <p>Controla tu inventario con interacciones inmediatas sin recargar la página.</p>
+        </div>
+        <div class="card">
+            <div class="card-num">02 / Diseño</div>
+            <h2>Interfaz sin ruido</h2>
+            <p>Estética brutalista que pone el contenido al frente. Nada sobra.</p>
+        </div>
+    </div>
+    <button class="btn" onclick="toggleDarkMode()">Alternar modo</button>
+</div>
+{% endblock %}

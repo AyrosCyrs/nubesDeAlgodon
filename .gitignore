@@ -1,0 +1,25 @@
+# Entorno virtual y paquetes
+venv/
+env/
+.venv/
+
+# Archivos que Python genera solo (compilados)
+*.py[cod]
+*.pyc
+*.pyo
+__pycache__/
+*/__pycache__/
+
+# Configuración local de tu base de datos (si usas SQLite)
+db.sqlite3
+db.sqlite3-journal
+
+# Archivos subidos por usuarios en pruebas locales
+media/
+
+# Configuración de tu editor
+.vscode/
+.idea/
+
+# Variables de entorno con contraseñas o claves (muy importante revisar esto)
+.env
