@@ -2,7 +2,7 @@
 
 Aplicación web de tienda en línea / catálogo de productos, desarrollada con Django como proyecto personal para practicar desarrollo backend.
 
-## 📋 ¿Qué hace?
+## ¿Qué hace?
 
 Permite gestionar y mostrar un catálogo de productos (inventario) mediante una aplicación web, incluyendo registro e inicio de sesión de usuarios.
 
